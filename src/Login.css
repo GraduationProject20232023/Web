@@ -10,10 +10,8 @@ body{
     font-size: 12px;
 }
 
-.page {
+.Login {
     position: absolute;
-	top: 0;
-	bottom: 0;
 	width: 100%;
 	max-width: 500px;
     padding: 0 20px;
@@ -21,23 +19,37 @@ body{
 	left: 50%;
 	transform: translate(-50%, 0);
 
-    background-color: #F7F7F7;
+    background-color: #FFF;
 
 	overflow: hidden;
     display: flex;
     flex-direction: column;
+
+    border: 1px solid #ebebeb;
+    border-radius: 15px;
+}
+
+.login-close{
+    margin-top: 15px;
+    text-align: right;
+    font-size: 15pt;
 }
 
 .titleWrap {
-    margin-top: 87px;
-    font-size: 26px;
-	font-weight: bold;
-	color: #262626;
+    margin-top: 50px;
+    font-size: 35px;
+	font-weight: 800;
+    text-align: center;
+	color: #444;
+}
+
+h1{
+    color: #00c471;
 }
 
 .contentWrap {
     margin-top: 26px;
-    flex: 1;
+    /* flex: 1; */
 }
 
 .inputTitle {
@@ -54,8 +66,9 @@ body{
     background-color: white;
     border: 1px solid #e2e0e0;
 }
+
 .inputWrap:focus-within {
-    border: 1px solid #9e30f4;
+    border: 3px solid #00c471;
 }
 
 .input {
@@ -75,11 +88,12 @@ body{
     width: 100%;
 	height: 48px;
     border: none;
-    font-weight: bold;
-    border-radius: 64px;
-    background-color: #9e30f4;
-    color: white;
-    margin-bottom: 16px;
+    font-weight: 800C;
+    border-radius: 10px;
+    background-color: #00c471;
+    color: #000;
+    margin-top: 30px;
+    /* margin-bottom: 16px; */
     cursor: pointer;
 }
 
@@ -92,4 +106,96 @@ body{
     margin-top: 8px;
     color: #ef0000;
     font-size: 12px;
+}
+
+.find{
+    padding: 20px 0 20px;
+    text-align: center;
+}
+
+ul{
+    list-style: none;
+}
+
+.find > li {
+    position: relative;
+    display: inline-block;
+}
+
+.find{
+    display: inline-block;
+    font-size: 14px;
+    line-height: 17px;
+    text-decoration: none;
+    color: #888;
+}
+
+a{
+    cursor: pointer;
+}
+
+.find li+li::before{
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 12px;
+    width: 1px;
+    height: 12px;
+    border-radius: 0.5px;
+    background-color: #dadada;
+}
+
+.find li+li{
+    padding-left: 28px;
+}
+
+hr{
+    border: 0;
+    width: 100%;
+}
+
+.social-login{
+    margin-top: 10px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.social-login-title{
+    z-index: 10;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.social-login-buttons{
+    display: flex;
+    margin: auto;
+    column-gap: 30px;
+}
+
+.kakao{
+    background-color: #fee500;
+}
+
+.google{
+    background-color: #fff;
+}
+
+.facebook{
+    background-color: #4267b2;
+}
+
+.naver{
+    background-color: #2db400;
+}
+
+.social-button{
+    width: 48px;
+    height: 48px;
+    border: 0;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px #ccc;
 }

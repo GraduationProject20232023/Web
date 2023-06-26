@@ -1,6 +1,11 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import {ReactComponent as LoginClose } from "./images/login-close.svg";
+import {ReactComponent as Kakao } from "./images/login-kakao.svg";
+import {ReactComponent as Facebook } from "./images/login-facebook.svg";
+import {ReactComponent as Google } from "./images/login-google.svg";
+import {ReactComponent as Naver } from "./images/login-naver.svg";
 import './Login.css';
 
 const User = {
@@ -53,29 +58,31 @@ function Login(){
     }
 
     return (
-      <div className="page">
+      <div className="Login">
+        <span className="login-close">
+          <LoginClose/>
+        </span>
+
         <div className="titleWrap">
-          이메일과 비밀번호를
-          <br />
-          입력해주세요
+          <a href="/" className="logo">
+            <h1>HANDY</h1>
+          </a>
         </div>
 
         <div className="contentWrap">
-          <div className="inputTitle">이메일 주소</div>
-          <div
-            className="inputWrap"
-          >
+          <div className="inputTitle">아이디</div>
+          <div className="inputWrap">
             <input
               className="input"
               type="text"
-              placeholder="test@gmail.com"
+              placeholder="handy1234"
               value={email}
               onChange={handleEmail}
             />
           </div>
           <div className="errorMessageWrap">
             {!emailValid && email.length > 0 && (
-              <div>올바른 이메일을 입력해주세요.</div>
+              <div>올바른 아이디를 입력해주세요.</div>
             )}
           </div>
 
@@ -97,12 +104,43 @@ function Login(){
             )}
           </div>
         </div>
-
         <div>
           <button onClick={onClickConfirmButton} disabled={notAllow} className="bottomButton">
-            확인
+            로그인
           </button>
         </div>
+        <ul className="find">
+          <li><a className="find-text">아이디 찾기</a></li>
+          <li><a className="find-text">비밀번호 찾기</a></li>
+          <li><a className="find-text">회원 가입</a></li>
+        </ul>
+        <hr className="social-login-line"/>
+        <div className="social-login">
+          <span className="social-login-title">간편 로그인</span>
+          <div className="social-login-buttons">
+            <div className="social-login-btnwrapper">
+              <button className="kakao social-button">
+                <Kakao/>
+              </button>
+            </div>
+            <div className="social-login-btnwrapper">
+              <button className="google social-button">
+                <Google/>
+              </button>
+            </div>
+            <div className="social-login-btnwrapper">
+              <button className="facebook social-button">
+                <Facebook/>
+              </button>
+            </div>
+            <div className="social-login-btnwrapper">
+              <button className="naver social-button">
+                <Naver/>
+              </button>
+            </div>
+          </div>
+        </div>
+
       </div>
     );
 }

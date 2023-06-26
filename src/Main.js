@@ -18,7 +18,7 @@ function Main(){
                         <div>웹 디자인, 도전해보세요</div>
                     </div>
                     <div className='main2'>
-                        <div>오직 소리다. 이것은 얼음 이상의 사라지지 스며들어 그들의 얼음과 청춘을 약동하다. 방황하여도,</div>
+                        <div>오직 소리다. 이것은 얼음 이상의 사라지지 스며들어 그들의 얼음과 청춘을 약동하다.</div>
                         <div>피가 대중을 놀이 어디 청춘 반짝이는 사라지지 봄바람이다.</div>
                     </div>
                     <div className='main3'>

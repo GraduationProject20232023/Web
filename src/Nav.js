@@ -9,7 +9,9 @@ function Nav(){
         <div className='Nav'>
           <header>
             <div className="brandbar">
-              <h1>HANDY</h1>
+              <a className='logo' href='/'>
+                <h1>HANDY</h1>
+              </a>
               <div className="brandbar-right">
                 <div className="search-bar">
                   <div className="search-area">

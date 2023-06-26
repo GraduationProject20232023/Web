@@ -12,7 +12,7 @@ body{
 
 header{
     display: block;
-    position: relative;
+    position: relative;   
     z-index: 30;
     border-bottom: 1px solid #ebebeb;
     box-shadow: 3px 3px #ebebeb;
@@ -28,6 +28,7 @@ div{
     width: 1190px;
     height: 63px;
     margin: 0 auto;
+    margin-top: 10px;
 }
 
 h1{

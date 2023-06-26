@@ -1,46 +1,31 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
 body {
-    color: #454545;
-    font-size: 1rem;
+    font-family: 'Pretendard-Regular';
+    color: #444;
+    font-size: 18px;
     font-weight: 400;
     line-height: 1.5;
 }
 
-
-.logo{
-    width: 10%;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-#alarm{
-    margin-left: 900px;
-    width: 30px;
-}
-
-.my-page{
-    margin-left: 20px;
-    margin-right: 20px;
-    display: column;
-    font-size: 12pt;
-    text-align: center;
-    border: 1px solid black;
-    border-radius: 10px;
-    background-color: black;
-    color: white;
-    padding: 10px
+div{
+    display: block;
 }
 
 .main-screen{
-    width: calc(100%-100px);
-    height: 600px;
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-top: 50px;
+    width: 1250px;
+    height:500px;
+    margin: 0 auto;
     background-color: #c7e3c8;
 
     display: flex;
     align-items: center;
-
+    justify-content: space-between;
 }
 
 .main-letter{
@@ -51,15 +36,21 @@ body {
 }
 
 .main1{
-    flex-basis: 300px;
-    font-weight: 900;
-    font-size: 36pt;
+    flex-basis: 200px;
+    font-weight: 1000;
+    font-size: 30pt;
+    color: black;
 }
 
 .main-img{
     margin-left: 100px;
     margin-right: 100px;
     flex-basis: content;
+}
+
+.main2{
+    font-size: 18px;
+    margin-bottom: 80px;
 }
 
 .main3{
@@ -71,14 +62,15 @@ body {
 }
 
 .main3-btn{
-    margin-left: 30px;
+    margin-left: 20px;
     height: 40px;
-    width: 180px;
+    width: 150px;
     color: white;
     text-align: center;
-    font-weight: 600;
     background-color: black;
     border-radius: 20px;
     align-self: center;
+    font-size: 18px;
+    line-height: 40px;
 }
 
