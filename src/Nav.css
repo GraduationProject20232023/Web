@@ -6,10 +6,6 @@ header{
     box-shadow: 3px 3px #ebebeb;
 }
 
-div{
-    display: block;
-}
-
 .brandbar{
     display: flex;
     justify-content: space-between;
@@ -171,10 +167,6 @@ hr{
     margin: 0 auto;
 }
 
-ul{
-    list-style: none;
-}
-
 .navbar-list{
     display: flex;
     height: 100%;
@@ -199,9 +191,4 @@ ul{
 
 a{
     text-decoration: none;
-}
-
-body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, button, select{
-    margin: 0;
-    padding: 0;
 }

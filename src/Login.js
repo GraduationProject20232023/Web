@@ -13,7 +13,7 @@ const User = {
   pw: 'test2323@@@'
 }
 
-function Login(){
+function Login(props){
     const [email, setEmail] = useState('');
     const [pw, setPw] = useState('');
 
@@ -59,16 +59,9 @@ function Login(){
 
     return (
       <div className="Login">
-        <span className="login-close">
+        <span onClick={()=>{props.setLoginBool(false)}}className="login-close">
           <LoginClose/>
         </span>
-
-        <div className="titleWrap">
-          <a href="/" className="logo">
-            <h1>HANDY</h1>
-          </a>
-        </div>
-
         <div className="contentWrap">
           <div className="inputTitle">아이디</div>
           <div className="inputWrap">

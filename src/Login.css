@@ -1,11 +1,13 @@
 .Login {
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+
 	width: 100%;
 	max-width: 500px;
     padding: 0 20px;
-
-	left: 50%;
-	transform: translate(-50%, 0);
 
     background-color: #FFF;
 
@@ -21,18 +23,6 @@
     margin-top: 15px;
     text-align: right;
     font-size: 15pt;
-}
-
-.titleWrap {
-    margin-top: 50px;
-    font-size: 35px;
-	font-weight: 800;
-    text-align: center;
-	color: #444;
-}
-
-h1{
-    color: #00c471;
 }
 
 .contentWrap {
@@ -99,10 +89,6 @@ h1{
 .find{
     padding: 20px 0 20px;
     text-align: center;
-}
-
-ul{
-    list-style: none;
 }
 
 .find > li {

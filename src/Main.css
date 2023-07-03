@@ -1,76 +1,125 @@
-@font-face {
+body{
+    margin: 0;
+
+}
+
+.Main{
+    background-color: var(--color-green);
+    border-bottom-left-radius: 60vh;
+}
+
+.main-nav-container{
     font-family: 'Pretendard-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-}
-
-body {
-    font-family: 'Pretendard-Regular';
-    color: #444;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1.5;
-}
-
-div{
-    display: block;
-}
-
-.main-screen{
-    width: 1250px;
-    height:500px;
-    margin: 0 auto;
-    background-color: #c7e3c8;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 8vh;
+    padding-top: 2%;
 
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
 }
 
-.main-letter{
+.main-nav-left{
     display: flex;
-    flex-direction: column;
-    text-align: right;
-    margin-right: 30px;
+    align-items: center;
+    justify-content: center;
 }
 
-.main1{
-    flex-basis: 200px;
-    font-weight: 1000;
-    font-size: 30pt;
-    color: black;
-}
-
-.main-img{
-    margin-left: 100px;
-    margin-right: 100px;
-    flex-basis: content;
-}
-
-.main2{
-    font-size: 18px;
-    margin-bottom: 80px;
-}
-
-.main3{
-    margin-top: 50px;
+.main-nav-logo a{
     display: flex;
-    justify-content: flex-end;
+    justify-items: center;
+    align-items: center;
+}
+
+.main-nav-menu{
+    margin-left: 5vh;
+}
+
+.main-menu-container a{
+    color: white;
+    font-weight: 400;
+    font-size: 1rem;
+
+    margin-right: 5vh;
+}
+
+/* 
+nav-right
+검색창, 로그인, 회원가입
+*/
+
+.main-nav-right{
+    display: flex;
+    align-items: center;
+}
+
+.main-search-container{
+    display: flex;
+    justify-content: center;
     align-items: center;
 
+    margin-right: 5vh;
 }
 
-.main3-btn{
-    margin-left: 20px;
-    height: 40px;
-    width: 150px;
+.main-search-input{
+    width: 15vw;
+    height: 5vh;
+
+    border: white;
+    border-radius: 10px 0px 0px 10px;
+    outline: none;
+    text-indent: 1rem;
+}
+
+.main-search-btn{
+    background-color: white;
+    border-radius: 0px 10px 10px 0px;
+
+    height: 5vh;
+    width: 5vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-member-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-member-container > *{
     color: white;
-    text-align: center;
-    background-color: black;
-    border-radius: 20px;
-    align-self: center;
-    font-size: 18px;
-    line-height: 40px;
+    margin-left: 2vh;
 }
 
+/* 
+main-content-container
+본문
+*/
+
+.main-content-container{
+    height: 80vh
+}
+
+.login-modal-wrapper{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(11, 19, 30, 0.37);
+    z-index: 10;
+    backdrop-filter: blur(3px);
+}
+
+.login-modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+}
