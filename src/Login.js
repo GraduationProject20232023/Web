@@ -9,34 +9,33 @@ import {ReactComponent as Naver } from "./images/login-naver.svg";
 import './Login.css';
 
 const User = {
-  email: 'test@example.com',
-  pw: 'test2323@@@'
+  id: 'handy1234',
+  pw: 'Handy1234!'
 }
 
 function Login(props){
-    const [email, setEmail] = useState('');
+    const [id, setID] = useState('');
     const [pw, setPw] = useState('');
 
-    const [emailValid, setEmailValid] = useState(false);
+    const [idValid, setIDValid] = useState(false);
     const [pwValid, setPwValid] = useState(false);
     const [notAllow, setNotAllow] = useState(true);
 
     useEffect(() => {
-      if(emailValid && pwValid) {
+      if(idValid && pwValid) {
         setNotAllow(false);
         return;
       }
       setNotAllow(true);
-    }, [emailValid, pwValid]);
+    }, [idValid, pwValid]);
 
     const handleEmail = (e) => {
-      setEmail(e.target.value);
-      const regex =
-        /^(([^<>()\[\].,;:\s@"]+(\.[^<>()\[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i;
+      setID(e.target.value);
+      const regex = /^[A-Za-z0-9]{4,10}$/;
       if (regex.test(e.target.value)) {
-        setEmailValid(true);
+        setIDValid(true);
       } else {
-        setEmailValid(false);
+        setIDValid(false);
       }
     };
     const handlePw = (e) => {
@@ -50,7 +49,7 @@ function Login(props){
       }
     };
     const onClickConfirmButton = () => {
-      if(email === User.email && pw === User.pw) {
+      if(id === User.id && pw === User.pw) {
         alert('로그인에 성공했습니다.')
       } else {
         alert("등록되지 않은 회원입니다.");
@@ -68,13 +67,13 @@ function Login(props){
             <input
               className="input"
               type="text"
-              placeholder="handy1234"
-              value={email}
+              // placeholder="영문자, 숫자 혼용 4-10자리 이내"
+              value={id}
               onChange={handleEmail}
             />
           </div>
           <div className="errorMessageWrap">
-            {!emailValid && email.length > 0 && (
+            {!idValid && id.length > 0 && (
               <div>올바른 아이디를 입력해주세요.</div>
             )}
           </div>
@@ -107,29 +106,22 @@ function Login(props){
           <li><a className="find-text">비밀번호 찾기</a></li>
           <li><a className="find-text">회원 가입</a></li>
         </ul>
-        <hr className="social-login-line"/>
         <div className="social-login">
           <span className="social-login-title">간편 로그인</span>
-          <div className="social-login-buttons">
+          <div className="social-login-btn-container">
             <div className="social-login-btnwrapper">
-              <button className="kakao social-button">
+              <a href="" className="kakao social-button">
                 <Kakao/>
-              </button>
-            </div>
-            <div className="social-login-btnwrapper">
-              <button className="google social-button">
-                <Google/>
-              </button>
-            </div>
-            <div className="social-login-btnwrapper">
-              <button className="facebook social-button">
-                <Facebook/>
-              </button>
-            </div>
-            <div className="social-login-btnwrapper">
-              <button className="naver social-button">
+              </a>
+              <a href="" className="naver social-button">
                 <Naver/>
-              </button>
+              </a>
+              <a href="" className="facebook social-button">
+                <Facebook/>
+              </a>
+              <a href="" className="gogle social-button">
+                <Google/>
+              </a>
             </div>
           </div>
         </div>

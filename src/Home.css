@@ -3,13 +3,17 @@ body{
 
 }
 
-.Main{
+.Home{
     background-color: var(--color-green);
     border-bottom-left-radius: 60vh;
 }
 
-.main-nav-container{
-    font-family: 'Pretendard-Regular';
+.home-nav-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.home-primary-nav-container{
     margin-left: 10%;
     margin-right: 10%;
     height: 8vh;
@@ -20,23 +24,23 @@ body{
     align-items: center;
 }
 
-.main-nav-left{
+.home-nav-left{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.main-nav-logo a{
+.home-nav-logo a{
     display: flex;
     justify-items: center;
     align-items: center;
 }
 
-.main-nav-menu{
+.home-nav-menu{
     margin-left: 5vh;
 }
 
-.main-menu-container a{
+.home-menu-container a{
     color: white;
     font-weight: 400;
     font-size: 1rem;
@@ -49,12 +53,12 @@ nav-right
 검색창, 로그인, 회원가입
 */
 
-.main-nav-right{
+.home-nav-right{
     display: flex;
     align-items: center;
 }
 
-.main-search-container{
+.home-search-container{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,7 +66,9 @@ nav-right
     margin-right: 5vh;
 }
 
-.main-search-input{
+.home-search-input{
+    color: var(--color-black);
+
     width: 15vw;
     height: 5vh;
 
@@ -72,7 +78,7 @@ nav-right
     text-indent: 1rem;
 }
 
-.main-search-btn{
+.home-search-btn{
     background-color: white;
     border-radius: 0px 10px 10px 0px;
 
@@ -84,23 +90,44 @@ nav-right
     justify-content: center;
 }
 
-.main-member-container{
+.home-member-container{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.main-member-container > *{
+.home-member-container > *{
     color: white;
     margin-left: 2vh;
 }
 
+.home-member-login{
+    cursor: pointer;
+}
+
+
 /* 
-main-content-container
+home-sub-nav-container
+서브 네이게이션 바
+*/
+
+.home-sub-nav-container{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.home-sub-nav-list > a {
+    color: white;
+    margin-right: 2vw;
+    font-size: 0.8rem;
+}
+
+/* 
+home-content-container
 본문
 */
 
-.main-content-container{
+.home-content-container{
     height: 80vh
 }
 

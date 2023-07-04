@@ -151,7 +151,7 @@ svg{
     color: #444;
 } */
 
-hr{
+header > hr{
     background: #ebebeb;
     height: 2px;
     border: 0;
